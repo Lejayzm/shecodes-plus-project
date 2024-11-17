@@ -60,6 +60,7 @@ main {
   font-weight: 900;
   margin: 0;
 }
+
 .current-details {
   color: rgba(39, 33, 66, 0.4);
   font-size: 16px;
@@ -112,7 +113,8 @@ main {
   justify-content: center;
   margin-top: 10px;
   text-align: center;
-  color: #f652682;
+  color: #f65282;
+  margin-bottom: 30px;
 }
 
 .weather.weather-forecast-temp {
