@@ -45,26 +45,28 @@ function formatDate(date) {
 }
 
 function displayForecast() {
-let forecast = document.querySelector("#forecast");
-
-let days =["Tue", "Wed", "Thur", "Fri", "Sat", "Sun"];
-let forecastHtml ="";
+let days =["Tue", "Wed", "Thur", "Fri", "Sat"];
+let forecastHtml = "";
 
 days.forEach(function (day) {
-forecast.innerHTML = forecastHtml +
-`
-<div class="weather-forecast-day">
-          <div class="weather-forecast-date">${day}</div>
-          <div class="weather-forecast-icon">🌤️</div>
-          <div class="weather-forecast-temps">
-            <div class="weather-forecast-temp"><strong>15°</strong></div>
-            <div>9°</div>
-          </div>
-</div>
+  forecastHtml = 
+   forecastHtml + 
+   `
+   <div class="weather-forecast-day">
+     <div class="weather-forecast-date">${day}</div>
+     <div class="weather-forecast-icon">🌤️</div>
+     <div class="weather-forecast-temps">
+       <div class="weather-forecast-temp">
+        <strong>15°</strong>
+       </div>
+       <div class="weather-forecast-temp">9°</div>
+      </div>
+   </div>
 `;
-}
+});
 
-forecastElement,innerHTML = forecastHtml;
+let forecastElement = document.querySelector("#forecast");
+forecastElement.innerHTML = forecastHtml;
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
@@ -74,4 +76,5 @@ let currentDate = new Date();
 
 currentDateELement.innerHTML = formatDate(currentDate);
 
-displayForecast()
+searchCity("Paris");
+displayForecast();
