@@ -21,7 +21,7 @@ header {
   padding-bottom: 30px;
 }
 
-.search-input {
+.search-form-input {
   background-color: #f9f7fe;
   border: none;
   color: rgba(39, 33, 66, 0.4);
@@ -47,7 +47,7 @@ main {
 }
 
 .current-temperature {
-  font-size: 48px;
+  display: flex;
 }
 
 .current-weather {
@@ -73,21 +73,19 @@ main {
 }
 
 .current-temperature-icon {
-  position: relative;
-  top: -8px;
-  font-size: 40px;
-  margin-right: 10px;
+  width: 88px;
+  height: 88px;
 }
 
 .current-temperature-value {
-  font-size: 80px;
+  font-size: 88px;
+  line-height: 88px;
   font-weight: bold;
 }
 
 .current-temperature-unit {
   font-size: 28px;
-  position: relative;
-  top: -38px;
+  margin-top: 6px;
 }
 
 .weather-forecast {
@@ -104,8 +102,10 @@ main {
 }
 
 .weather-forecast-icon {
-  font-size: 38px;
-  text-align: center;
+  width: 88px;
+  height: 88px;
+  display: block;
+  margin: 0 auto;
 }
 
 .weather-forecast-temps {
