@@ -10,13 +10,14 @@ function handleSearchSubmit(event) {
   event.preventDefault();
 //3 targeting search  
   let searchInput = document.querySelector("#search-form-input");
+  let cityElement = document.querySelector("#city");
 //6 search value sent to searchcity
   searchCity(searchInput.value);
-
+} 
 //1 selecting form
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
-}
+
 
 function refreshWeather(response) {
   let temperatureElement = document.querySelector("#current-temperature");
@@ -111,8 +112,8 @@ function displayForecast(response) {
 }
 
 
-let searchFormElement = document.querySelector("#search-form-input");
-searchFormElement.addEventListener("submit", handleSearchSubmit);
+//let searchFormElement = document.querySelector("#search-form-input");
+//searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Paris");
 
